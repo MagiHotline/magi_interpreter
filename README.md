@@ -1,6 +1,6 @@
 # Interpreter for Magi language
 
-This very simple interpreter for my own custom programming language called "Magi" is used using [antlr4rust](https://github.com/rrevenantt/antlr4rust), an ANTLR4 parser generator runtime for Rust programming language.
+This very simple interpreter for my own custom programming language called "Magi" is made by using [antlr4rust](https://github.com/rrevenantt/antlr4rust), an ANTLR4 parser generator runtime for Rust programming language.
 
 ## Prerequisites
 
