@@ -22,6 +22,17 @@ export ANTLR_JAR=/path/to/antlr4-4.8-2-SNAPSHOT-complete.jar
 cargo build
 ```
 
+## Usage
+
+You can either run it using simple ```cargo run``` (and then you would be
+requested to write Magi code (look [Syntax](README#Syntax))) or you can 
+pass a file path to the source code.
+
+```
+cargo run path/to/source.magi
+```
+
+
 ## Syntax
 
 This is an example of syntax for the Magi language:
