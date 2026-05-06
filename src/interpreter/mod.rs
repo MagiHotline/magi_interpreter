@@ -282,7 +282,7 @@ mod tests {
     fn test_assignment() {
 
         let mut intp = MagiInterpreter::new();
-        let program = "a = 5";
+        let program = "a := 5;";
         let tree = MagiInterpreter::parse(program);
 
         intp.visit(&*tree);
@@ -294,7 +294,7 @@ mod tests {
     #[test]
     fn test_while() {
         let mut intp = MagiInterpreter::new();
-        let program = "a = 10; while(a > 0) { a = a - 1 } ";
+        let program = "a := 10; while(a > 0) { a := a - 1; } ";
         let tree = MagiInterpreter::parse(program);
 
         intp.visit(&*tree);
@@ -306,7 +306,7 @@ mod tests {
     #[test]
     fn test_if() {
         let mut intp = MagiInterpreter::new();
-        let program = "if (true) { a = 5 } ";
+        let program = "if (true) { a := 5; } ";
         let tree = MagiInterpreter::parse(program);
 
         intp.visit(&*tree);
@@ -317,7 +317,7 @@ mod tests {
     #[test]
     fn test_if_else() {
         let mut intp = MagiInterpreter::new();
-        let program = "if (false) { a = 5 } else { a = 2 }";
+        let program = "if (false) { a := 5; } else { a := 2; }";
         let tree = MagiInterpreter::parse(program);
 
         intp.visit(&*tree);

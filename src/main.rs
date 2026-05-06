@@ -4,7 +4,6 @@ use magi_interpreter::interpreter::MagiInterpreter;
 use antlr_rust::tree::ParseTreeVisitorCompat;
 
 fn main() {
-
     let args: Vec<String> = env::args().collect();
     let mut input = String::new();
 
