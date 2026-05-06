@@ -3,12 +3,12 @@ grammar Magi;
 
 main : com EOF ;
                                                             /* Labels */
-com:  VAR ASSIGN exp                                        # var
+com:  VAR ASSIGN exp SEMICOLON                              # var
     | com SEMICOLON com                                     # seq
     | IF LPAR exp RPAR LCUR com RCUR                        # if
     | IF LPAR exp RPAR LCUR com RCUR ELSE LCUR com RCUR     # ifElse
     | WHILE LPAR exp RPAR LCUR com RCUR                     # while
-    | PRINT LPAR exp RPAR                                   # print
+    | PRINT LPAR exp RPAR SEMICOLON                         # print
     ;
 
 exp : FLOAT                                                 # float
@@ -59,7 +59,7 @@ AND: '&&' ;
 OR: '||' ;
 
 // ASSIGNMENT
-ASSIGN : '=' ;
+ASSIGN : ':=' ;
 SEMICOLON : ';' ;
 
 // STRING LITERALS

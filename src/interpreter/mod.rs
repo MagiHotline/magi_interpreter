@@ -5,7 +5,6 @@ use crate::parser::magiparser::PowContext;
 
 mod panic_error_listener;
 mod value;
-mod exception;
 
 use crate::interpreter::panic_error_listener::PanicErrorListener;
 use crate::interpreter::value::Value;
@@ -40,7 +39,10 @@ impl MagiInterpreter {
         parser.add_error_listener(Box::new(PanicErrorListener {}));
 
         // Execute the grammar from the 'main' nonterminal symbol and prints the tree
-        parser.main().unwrap()
+        let tree = parser.main().unwrap();
+        println!("{}", tree.to_string_tree(&*parser));
+
+        tree
     }
 }
 

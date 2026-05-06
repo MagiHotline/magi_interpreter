@@ -1,4 +1,4 @@
-use std::{fmt::{Display, write}, ops::{Add, BitAnd, BitOr, Div, Mul, Not, Rem, Sub}, panic};
+use std::{fmt::Display, ops::{Add, BitAnd, BitOr, Div, Mul, Not, Rem, Sub}, panic};
 
 /// Struct that implements type of values
 #[derive(Debug, Clone, Copy, PartialOrd)]
