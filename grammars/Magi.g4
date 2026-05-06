@@ -4,7 +4,7 @@ grammar Magi;
 main : com EOF ;
                                                             /* Labels */
 com:  VAR ASSIGN exp SEMICOLON                              # var
-    | com com                                     # seq
+    | com com                                               # seq
     | IF LPAR exp RPAR LCUR com RCUR                        # if
     | IF LPAR exp RPAR LCUR com RCUR ELSE LCUR com RCUR     # ifElse
     | WHILE LPAR exp RPAR LCUR com RCUR                     # while
